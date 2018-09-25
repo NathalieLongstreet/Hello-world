@@ -1,2 +1,2 @@
 # Hello-world
-Place to store ideas, resources, share and discuss things with others
+Place to store some of my favoirte creations

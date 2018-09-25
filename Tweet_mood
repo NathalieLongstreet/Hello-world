@@ -1,0 +1,20 @@
+import tweepy
+from textblob import textblob
+
+#step one - authenticate
+customer_key = "GN6ARDFrwTuusoL8eAsE1MB2W"
+customer_secret = "EzLFSIv2W5ldtNQqEPYGD1r1TCr9bZBb4wpAgD4OKvw1Az3TAj"
+
+access_token = "1041345622563909633-0fkqUEwsrIuHIzzK8hq11ovzVt1rZw"
+access_token_secret = "DOGpPVajw7C7HYwKXb5DldfzlWYhjFKLTZbpguwtudmh6"
+
+auth = tweepy.AuthHandler(customer_key, customer_secret)
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth)
+public_tweets = API.search(Trump)
+
+for tweet in public_tweets:
+    print(tweet.text)
+    analysis = textblob(tweet.text)
+    print(analysis.sentiments)
